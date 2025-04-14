@@ -1,0 +1,116 @@
+:root {
+    --preto-hsl: 0, 0%, 0%;
+    --branco-hsl: 0, 0%, 100%;
+    --texto-hsl: 211.2, 12.56%, 100%;
+    --cinza-100-hsl: 0, 0%, 95%;
+    --cinza-200-hsl: 0, 0%, 85%;
+    --cinza-300-hsl: 0, 0%, 70%;
+    --cinza-400-hsl: 0, 0%, 50%;
+    --cinza-500-hsl: 0, 0%, 30%;
+
+    --bg-color-hsl: var(--branco-hsl);
+    --text-color-hsl: var(--preto-hsl);
+    --filter: none;
+}
+
+.dark-theme {
+    --preto-hsl: 0, 0%, 0%;
+    --branco-hsl: 0, 0%, 100%;
+    --texto-hsl: 211.2, 12.56%, 100%;
+    --cinza-100-hsl: 0, 0%, 10%;
+    --cinza-200-hsl: 0, 0%, 20%;
+    --cinza-300-hsl: 0, 0%, 35%;
+    --cinza-400-hsl: 0, 0%, 50%;
+    --cinza-500-hsl: 0, 0%, 70%;
+
+    --bg-color-hsl: var(--preto-hsl);
+    --text-color-hsl: var(--branco-hsl);
+    --filter: invert();
+}
+
+body {
+    margin: 0;
+    font-family: roboto, 'Segoe UI', sans-serif;
+    background-color: hsl(var(--bg-color-hsl));
+    color: hsl(var(--text-color-hsl));
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#topbar {
+    height: 80px;
+    width: 100dvw;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid hsla(var(--text-color-hsl), 0.2);
+
+    text-align: center;
+    /*horizontal*/
+
+    align-content: center;
+    /*vertical*/
+
+    align-items: center;
+    /*vertical*/
+}
+
+.logotipotopbar {
+    height: 22px;
+    width: auto;
+    margin: 0 10px 0 20px;
+    transition: ease 0.5s;
+    filter: var(--filter);
+}
+.logotipotopbar:hover {
+    filter: opacity(0.5);
+    transition: ease 0.5s;
+}
+
+#titulonav {
+    font-family: 'Roboto';
+    letter-spacing: 0.04rem;
+    min-width: 90px;
+    transform: scaleY(1.2);
+    text-align: left;
+}
+#titulonav #nome {
+    font-weight: 900;
+    font-size: 11pt;
+}
+#titulonav #funcao {
+    font-weight: 400;
+    font-size: 7pt;
+}
+
+.menu {
+    font-family: 'Quicksand';
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    padding: 0 10px;
+    margin: 0 0 0 10px;
+    flex: 1 1 100%;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.menu ul {
+    margin: 0px;
+    display: inline-flex;
+}
+.menu ul li {
+    margin: 0 2px;
+}
+.menu ul li a {
+    color: hsla(var(--text-color-hsl), 1);
+    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.2);
+    transition: ease 0.5s;
+    white-space: nowrap;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.menu ul li a:hover {
+    color: hsla(var(--text-color-hsl), 1);
+    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.6);
+    transition: ease 0.5s;
+    background-color: hsla(var(--cinza-100-hsl), 0.2);
+    box-shadow: 0.5px 0.5px 5px hsla(var(--preto-hsl),0.1);
+}
