@@ -1,9 +1,11 @@
 .togglefather {
-    display: flex;
+    /* display: flex; */
+    display: none;
     width: 200px;
     margin: 0 20px 0 0;
-    justify-content: right;
+    justify-content: end;
 }
+
 .toggle {
     display: flex;
     align-items: center;
@@ -11,6 +13,7 @@
     border-radius: 25px;
     min-width: 35px;
     height: 20px;
+    width: 20px;
     cursor: pointer;
     position: relative;
     transition: background 0.5s ease, box-shadow 0.5s;
@@ -28,7 +31,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transform: translateX(0px); /*Posição inicial SOL*/
+    transform: translateX(0px);
+    /*Posição inicial SOL*/
     transition: transform 0.5s ease-out, background 1s ease;
 }
 
@@ -39,14 +43,18 @@
 
 .toggle.dark .slider {
     background: hsla(var(--branco-hsl), 1);
-    transform: translateX(15px); /*Posição final LUA*/
+    transform: translateX(15px);
+    /*Posição final LUA*/
 }
 
 .icon {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-    
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+
     position: absolute;
     transition: transform 0.5s ease-in-out, opacity 0.3s ease;
     width: 15px;
@@ -65,15 +73,18 @@
     color: hsla(var(--preto-hsl), 1);
     opacity: 0;
     position: absolute;
-    transform: rotate(-45deg); /*Angulo inicial da lua*/
+    transform: rotate(-45deg);
+    /*Angulo inicial da lua*/
 }
 
 .toggle.dark .icon-moon {
-    transform: rotate(45deg); /*Angulo final do sol (esse estado final tem opacidade 0)*/ 
+    transform: rotate(45deg);
+    /*Angulo final do sol (esse estado final tem opacidade 0)*/
     opacity: 0;
 }
 
 .toggle.dark .icon-sun {
-    transform: rotate(0deg); /*Angulo final da lua*/
+    transform: rotate(0deg);
+    /*Angulo final da lua*/
     opacity: 1;
 }

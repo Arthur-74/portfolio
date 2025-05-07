@@ -60,6 +60,7 @@ body {
     transition: ease 0.5s;
     filter: var(--filter);
 }
+
 .logotipotopbar:hover {
     filter: opacity(0.5);
     transition: ease 0.5s;
@@ -72,10 +73,12 @@ body {
     transform: scaleY(1.2);
     text-align: left;
 }
+
 #titulonav #nome {
     font-weight: 900;
     font-size: 11pt;
 }
+
 #titulonav #funcao {
     font-weight: 400;
     font-size: 7pt;
@@ -96,9 +99,11 @@ body {
     margin: 0px;
     display: inline-flex;
 }
+
 .menu ul li {
     margin: 0 2px;
 }
+
 .menu ul li a {
     color: hsla(var(--text-color-hsl), 1);
     text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.2);
@@ -107,38 +112,23 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
 }
+
 .menu ul li a:hover {
     color: hsla(var(--text-color-hsl), 1);
     text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.6);
     transition: ease 0.5s;
     background-color: hsla(var(--cinza-100-hsl), 0.2);
-    box-shadow: 0.5px 0.5px 5px hsla(var(--preto-hsl),0.1);
+    box-shadow: 0.5px 0.5px 5px hsla(var(--preto-hsl), 0.1);
 }
+
 .dark-theme .menu ul li a {
     color: hsla(var(--texto-hsl), 0.5);
     text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0);
 }
+
 .dark-theme .menu ul li a:hover {
     color: hsla(var(--branco-hsl), 1);
     text-shadow: 0.5px 0.5px var(--preto-hsl);
-    background-color: hsla(var(--branco-hsl), 0.1); /* 50% opacidade */
-}
-
-.menu2father {
-    display: none;
-    width: 195px;
-    margin: 0 20px 0 0;
-    justify-content: right;
-    background: pink;
-}
-.menu2 {
-    display: flex;
-    /* min-width: 40px; */
-    width: 40px;
-    text-align: center;
-    background: yellow;
-}
-.menu2 p {
-    width: 100px;
-    align-content: center;
+    background-color: hsla(var(--branco-hsl), 0.1);
+    /* 50% opacidade */
 }

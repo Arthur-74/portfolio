@@ -1,0 +1,74 @@
+.menu2father {
+    display: flex;
+    width: 200px;
+    margin: 0 20px 0 0;
+    justify-content: right;
+    /* background: pink; */
+}
+
+.menuExpand {
+    display: grid;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    transition: ease 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
+
+.menuExpand:hover {
+    transition: ease 0.5s;
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.174); */
+    background-color: rgba(244, 244, 244, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menuExpand .span {
+    height: 15px;
+    width: 15px;
+    margin: 8px;
+    position: relative;
+    /* background-color: pink; */
+}
+
+.menuExpand span {
+    width: 90%;
+    height: 1.5px;
+    background-color: #000;
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, width 0.5s, opacity 0.5s;
+}
+
+.menuExpand .line2 {
+    transform: translate(-50%, -1.5px);
+}
+
+/*================= Menu 6 pretzel x cortado ==================*/
+.menu6 .line1 {
+    transform: translate(58%, -8px);
+    width: 30%;
+}
+
+.menu6 .line3 {
+    transform: translate(-170%, 5px);
+    width: 30%;
+}
+
+.openmenu6 .line1 {
+    transform: translate(35%, -260%) rotate(-45deg);
+    width: 25%;
+}
+
+.openmenu6 .line3 {
+    transform: translate(-150%, 180%) rotate(-45deg);
+    width: 25%;
+}
+
+.openmenu6 .line2 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}

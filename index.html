@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Arthur</title>
 
     <!-- Fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Quicksand:wght@300..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Quicksand:wght@300..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+        rel="stylesheet">
+
     <!-- Estilos -->
     <link rel="stylesheet" href="src/ResetCSS.css">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/toggle.css">
+    <link rel="stylesheet" href="src/menuExpand.css">
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
@@ -61,14 +65,42 @@
         </div>
 
         <div class="menu2father">
-            <div class="menu2">
-                <p>teste</p>
+            <div class="menuExpand menu6" id="menu6">
+                <div class="span">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
             </div>
         </div>
 
     </div>
 
     <script src="src/toggle.js"></script>
+    <script>
+        const menus = [
+            { id: "menu6", toggleOnly: true, openClass: "openmenu6" }
+        ];
+
+        menus.forEach(menu => {
+            const el = document.getElementById(menu.id);
+            if (!el) return;
+
+            el.onclick = () => {
+                if (menu.toggleOnly) {
+                    el.classList.toggle(menu.openClass);
+                } else {
+                    const isOpen = el.classList.contains(menu.openClass);
+                    el.classList.remove(menu.openClass, menu.closeClass);
+                    void el.offsetWidth; // Força repaint
+
+                    el.classList.add(isOpen ? menu.closeClass : menu.openClass);
+                }
+            };
+        });
+
+    </script>
 
 </body>
+
 </html>
