@@ -228,12 +228,12 @@ transition: ease 0.5s;
 
 .about_section #title {
     font-family: Roboto;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
     color: hsl(var(--cinza-400-hsl));
     text-align: center;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
 }
 
 .about_section #about_one {
