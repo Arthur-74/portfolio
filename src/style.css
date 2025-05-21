@@ -206,3 +206,54 @@ transition: ease 0.5s;
     color: hsl(var(--cinza-500-hsl));
     text-decoration: none;
 }
+
+.about_me {
+    display: flex;
+    /* background-color: yellow; */
+    /* background-color: hsl(var(--bg-color-hsl)); */
+    width: 100%;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_section {
+    background-color: hsl(var(--bg-color-hsl), 0.4);
+    width: 80dvw;
+    align-content: center;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid hsl(var(--text-color-hsl), 0.2);
+}
+
+.about_section #title {
+    font-family: Roboto;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: hsl(var(--cinza-400-hsl));
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+.about_section #about_one {
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: hsl(var(--text-color-hsl));
+    padding: 20px 0;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.about_section #about_two {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: hsl(var(--cinza-500-hsl));
+    padding: 10px 0;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
