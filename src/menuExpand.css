@@ -1,5 +1,5 @@
 .menu2father {
-    display: flex;
+    display: none;
     width: 200px;
     margin: 0 20px 0 0;
     justify-content: right;

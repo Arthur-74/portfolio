@@ -1,6 +1,6 @@
 .togglefather {
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     width: 200px;
     margin: 0 20px 0 0;
     justify-content: end;
