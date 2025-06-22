@@ -1,10 +1,12 @@
 function toggleMode() {
     const app = document.getElementById('app');
     const toggle = document.getElementById('toggle');
+    const toggle2 = document.getElementById('toggle2');
 
     // Alterna classes
     app.classList.toggle('dark-theme');
     toggle.classList.toggle('dark');
+    toggle2.classList.toggle('dark');
 
     // Salva no localStorage
     const isDark = app.classList.contains('dark-theme');
@@ -20,5 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (theme === 'dark') {
         app.classList.add('dark-theme');
         toggle.classList.add('dark');
+        toggle2.classList.toggle('dark');
     }
 });

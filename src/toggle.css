@@ -88,3 +88,31 @@
     /*Angulo final da lua*/
     opacity: 1;
 }
+
+@media (max-width: 1024px) {
+    .togglefather {
+        display: none;
+    }
+    .menu_expand_area .togglefather {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0 15px 0;
+    }
+}
+@media (min-width: 1025px) {
+    .menu_expand_area .togglefather {
+        display: none;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+    .togglefather {
+        display: block;
+        position: absolute;
+        right: 40px;
+        width: auto;
+    }
+    .menu_expand_area .togglefather {
+        display: none;
+    }
+}

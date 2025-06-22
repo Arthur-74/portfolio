@@ -8,7 +8,7 @@
 
     <!-- Fontes -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Quicksand:wght@300..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
         rel="stylesheet">
 
     <!-- Estilos -->
@@ -52,7 +52,7 @@
                 <li><a href="#">Sobre mim</a></li>
                 <li><a href="#">Habilidades</a></li>
                 <li><a href="#">Projetos</a></li>
-                <li><a href="#">Experiência</a></li>
+                <!-- <li><a href="#">Experiência</a></li> -->
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Extras</a></li>
             </ul>
@@ -67,8 +67,8 @@
             </div>
         </div>
 
-        <div class="menu2father">
-            <div class="menuExpand menu6" id="menu6">
+        <div class="burgerMenuFather">
+            <div class="burgerMenuExpand burgerMenu" id="burgerMenu">
                 <div class="span">
                     <span class="line1"></span>
                     <span class="line2"></span>
@@ -76,7 +76,28 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="menu_expand_area">
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#">Habilidades</a></li>
+                <li><a href="#">Projetos</a></li>
+                <!-- <li><a href="#">Experiência</a></li> -->
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Extras</a></li>
+            </ul>
+        </nav>
 
+        <div class="togglefather">
+            <div class="toggle" id="toggle2" onclick="toggleMode()">
+                <div class="slider">
+                    <i class="fa-light fa-moon-stars icon icon-moon"></i>
+                    <i class="fa-light fa-sun-bright icon icon-sun"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="hero_section">
@@ -99,7 +120,10 @@
         <div class="about_section">
             <span class="linha-vertical-about-section esquerda"></span>
             <span class="linha-vertical-about-section direita"></span>
-            <p id="title">Um pouco mais sobre mim</p>
+            <div id="title">
+                <span>Um pouco mais</span>
+                <p>sobre mim</p>
+            </div>
             <p id="about_one">
                 Sou desenvolvedor front-end e gosto de pensar no código como uma ferramenta para criar experiências
                 daquelas que são bonitas de ver, gostosas de usar e leves de carregar. Trabalho com foco em
@@ -123,7 +147,10 @@
         <div class="skills_section">
             <span class="linha-vertical-skills-section esquerda"></span>
             <span class="linha-vertical-skills-section direita"></span>
-            <p id="title">Habilidades:</p>
+            <div id="title">
+                <span>Minhas</span>
+                <p>Skills</p>
+            </div>
             <div class="skills_grid">
 
                 <div class="skills_card">
@@ -470,7 +497,10 @@
         <div class="projects_section">
             <span class="linha-vertical-projects-section esquerda"></span>
             <span class="linha-vertical-projects-section direita"></span>
-            <p id="title">Projetos:</p>
+            <div id="title">
+                <span>Meus</span>
+                <p>Projetos</p>
+            </div>
             <div class="projects_grid">
 
                 <!-- <a class="project_card" href="#">
@@ -559,28 +589,72 @@
         </div>
     </div>
 
+    <!-- <div class="experience">
+        <div class="experience_section">
+            <span class="linha-vertical-experience-section esquerda"></span>
+            <span class="linha-vertical-experience-section direita"></span>
+            <div id="title">
+                <p>Experiência:</p>
+            </div>
+            <div class="experience_grid">
+
+            </div>
+        </div>
+    </div> -->
+
+    <div class="contact">
+        <div class="contact_section">
+            <div id="title">
+                <span>Meus</span>
+                <p>Contatos</p>
+            </div>
+            <div class="contact_grid">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="extras">
+        <div class="extras_section">
+            <div id="title">
+                <span>Curiosidades</span>
+                <p>Extras</p>
+            </div>
+            <div class="extras_grid">
+
+            </div>
+        </div>
+    </div>
+
     <script src="src/toggle.js"></script>
     <script>
-        const menus = [
-            { id: "menu6", toggleOnly: true, openClass: "openmenu6" }
-        ];
+        const burger = document.getElementById("burgerMenu");
+        const menuArea = document.querySelector(".menu_expand_area");
 
-        menus.forEach(menu => {
-            const el = document.getElementById(menu.id);
-            if (!el) return;
+        burger.addEventListener("click", (e) => {
+            e.stopPropagation();
 
-            el.onclick = () => {
-                if (menu.toggleOnly) {
-                    el.classList.toggle(menu.openClass);
-                } else {
-                    const isOpen = el.classList.contains(menu.openClass);
-                    el.classList.remove(menu.openClass, menu.closeClass);
-                    void el.offsetWidth; // Força repaint
+            const isOpen = burger.classList.toggle("openBurgerMenu");
 
-                    el.classList.add(isOpen ? menu.closeClass : menu.openClass);
-                }
-            };
+            if (isOpen) {
+                menuArea.classList.add("open");
+                document.addEventListener("click", handleClickOutside);
+            } else {
+                closeMenu();
+            }
         });
+
+        function closeMenu() {
+            burger.classList.remove("openBurgerMenu");
+            menuArea.classList.remove("open");
+            document.removeEventListener("click", handleClickOutside);
+        }
+
+        function handleClickOutside(e) {
+            if (!menuArea.contains(e.target) && !burger.contains(e.target)) {
+                closeMenu();
+            }
+        }
 
         const classToIconId = {
             'html-img': 'icon_html',

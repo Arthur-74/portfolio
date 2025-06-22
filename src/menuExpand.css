@@ -1,39 +1,36 @@
-.menu2father {
+.burgerMenuFather {
     display: none;
-    width: 200px;
-    margin: 0 20px 0 0;
-    justify-content: right;
-    /* background: pink; */
+    position: absolute;
+    right: 10px;
 }
 
-.menuExpand {
+.burgerMenuExpand {
     display: grid;
     height: 30px;
     width: 30px;
     border-radius: 10px;
     transition: ease 0.5s;
-    border: 1px solid rgba(0, 0, 0, 0.0);
+    border: 1px solid hsl(var(--cinza-100-hsl), 0);
 }
 
-.menuExpand:hover {
+.burgerMenuExpand:hover {
     transition: ease 0.5s;
     /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.174); */
-    background-color: rgba(244, 244, 244, 0.4);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: hsl(var(--bg-color-hsl));
+    border: 1px solid hsl(var(--cinza-100-hsl));
 }
 
-.menuExpand .span {
+.burgerMenuExpand .span {
     height: 15px;
     width: 15px;
     margin: 8px;
     position: relative;
-    /* background-color: pink; */
 }
 
-.menuExpand span {
+.burgerMenuExpand span {
     width: 90%;
     height: 1.5px;
-    background-color: #000;
+    background-color: hsl(var(--text-color-hsl));
     position: absolute;
     border-radius: 5px;
     display: flex;
@@ -44,31 +41,37 @@
     transition: transform 0.5s, width 0.5s, opacity 0.5s;
 }
 
-.menuExpand .line2 {
+.burgerMenuExpand .line2 {
     transform: translate(-50%, -1.5px);
 }
 
 /*================= Menu 6 pretzel x cortado ==================*/
-.menu6 .line1 {
+.burgerMenu .line1 {
     transform: translate(58%, -8px);
     width: 30%;
 }
 
-.menu6 .line3 {
+.burgerMenu .line3 {
     transform: translate(-170%, 5px);
     width: 30%;
 }
 
-.openmenu6 .line1 {
+.openBurgerMenu .line1 {
     transform: translate(35%, -260%) rotate(-45deg);
     width: 25%;
 }
 
-.openmenu6 .line3 {
+.openBurgerMenu .line3 {
     transform: translate(-150%, 180%) rotate(-45deg);
     width: 25%;
 }
 
-.openmenu6 .line2 {
+.openBurgerMenu .line2 {
     transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@media (max-width: 1024px) {
+    .burgerMenuFather {
+        display: flex;
+    }
 }
