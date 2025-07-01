@@ -37,7 +37,11 @@
 </head>
 
 <body id="app">
-    <div id="topbar">
+    <div class="cursor-neon"></div>
+    <button id="scrollButton">
+        <i class="fa-regular fa-angles-down"></i>
+    </button>
+    <section id="topbar">
 
         <img src="assets/images/AB-black.svg" class="logotipotopbar" alt="">
 
@@ -49,12 +53,12 @@
         <nav class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Projetos</a></li>
-                <!-- <li><a href="#">Experiência</a></li> -->
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Extras</a></li>
+                <li><a href="#aboutid">Sobre mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <!-- <li><a href="#experience">Experiência</a></li> -->
+                <li><a href="#contact">Contato</a></li>
+                <!-- <li><a href="#extra">Extras</a></li> -->
             </ul>
         </nav>
 
@@ -76,17 +80,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="menu_expand_area">
         <nav class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Projetos</a></li>
-                <!-- <li><a href="#">Experiência</a></li> -->
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Extras</a></li>
+                <li><a href="#aboutid">Sobre mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <!-- <li><a href="#experience">Experiência</a></li> -->
+                <li><a href="#contact">Contato</a></li>
+                <!-- <li><a href="#extra">Extras</a></li> -->
             </ul>
         </nav>
 
@@ -116,7 +120,7 @@
         </div>
     </div>
 
-    <div class="about_me">
+    <section id="aboutid" class="about_me">
         <div class="about_section">
             <span class="linha-vertical-about-section esquerda"></span>
             <span class="linha-vertical-about-section direita"></span>
@@ -141,9 +145,9 @@
                 gosto de aprender na prática, entender como as coisas funcionam e, quando possível, melhorá-las.
             </p>
         </div>
-    </div>
+    </section>
 
-    <div class="skills">
+    <section id="skills" class="skills">
         <div class="skills_section">
             <span class="linha-vertical-skills-section esquerda"></span>
             <span class="linha-vertical-skills-section direita"></span>
@@ -491,9 +495,9 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="projects">
+    <section id="projects" class="projects">
         <div class="projects_section">
             <span class="linha-vertical-projects-section esquerda"></span>
             <span class="linha-vertical-projects-section direita"></span>
@@ -587,9 +591,9 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="contact">
+    <section id="contact" class="contact">
         <div class="contact_section">
             <div id="title">
                 <span>Meus</span>
@@ -670,9 +674,9 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- <div class="extras">
+    <!-- <section id="extra" class="extras">
         <div class="extras_section">
             <div id="title">
                 <span>Curiosidades</span>
@@ -682,7 +686,7 @@
 
             </div>
         </div>
-    </div> -->
+    </section> -->
 
     <footer>
         <div class="footer_section">
@@ -708,12 +712,12 @@
                         <p>Navegação</p>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Sobre mim</a></li>
-                            <li><a href="#">Habilidades</a></li>
-                            <li><a href="#">Projetos</a></li>
-                            <!-- <li><a href="#">Experiência</a></li> -->
-                            <li><a href="#">Contato</a></li>
-                            <li><a href="#">Extras</a></li>
+                            <li><a href="#aboutid">Sobre mim</a></li>
+                            <li><a href="#skills">Habilidades</a></li>
+                            <li><a href="#projects">Projetos</a></li>
+                            <!-- <li><a href="#experience">Experiência</a></li> -->
+                            <li><a href="#contact">Contato</a></li>
+                            <!-- <li><a href="#extra">Extras</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -766,6 +770,67 @@
 
     <script src="src/toggle.js"></script>
     <script>
+
+        const button = document.getElementById('scrollButton');
+
+        button.addEventListener('mouseenter', () => {
+            const computedStyle = window.getComputedStyle(button);
+            const matrix = new DOMMatrixReadOnly(computedStyle.transform);
+            const currentY = matrix.m42;
+
+            // Para animação e fixa Y atual
+            button.style.animation = 'none';
+            button.style.transform = `translate(-50%, ${currentY}px)`;
+
+            // Espera um frame para aplicar transição suave
+            requestAnimationFrame(() => {
+                button.style.transition = 'transform 0.3s ease, background 0.5s ease, color 0.5s ease, box-shadow 0.5s';
+                button.style.transform = 'translate(-50%, 0)';
+            });
+        });
+
+        button.addEventListener('mouseleave', () => {
+            // Restaura animação
+            button.style.transition = '';
+            button.style.animation = 'bounce2 2s ease infinite';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            // Remove o transition e restaura a animação
+            icon.style.transition = '';
+            icon.style.animation = 'bounce2 2s ease infinite';
+        });
+
+        const sections = Array.from(document.querySelectorAll("section"));
+        const next = document.getElementById("scrollButton");
+
+        next.addEventListener("click", () => {
+            const scrollY = window.scrollY;
+            const viewportHeight = window.innerHeight;
+
+            // Encontramos a próxima seção com base na posição atual
+            const nextSection = sections.find(section => {
+                const rect = section.getBoundingClientRect();
+                return rect.top > 10; // Seção abaixo da posição atual
+            });
+
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: "smooth" });
+            } else {
+                // Se não há mais seções abaixo, volta para o topo (primeira)
+                sections[0].scrollIntoView({ behavior: "smooth" });
+            }
+        });
+
+        const cursor = document.querySelector(".cursor-neon");
+
+        document.addEventListener("mousemove", (e) => {
+            const rect = cursor.getBoundingClientRect();
+            const offsetX = rect.width / 2;
+            const offsetY = rect.height / 2;
+
+            cursor.style.transform = `translate(${e.clientX - offsetX}px, ${e.clientY - offsetY}px)`;
+        });
 
         function copiarEmail() {
             const copy = document.querySelector('.copyContactEmail');
