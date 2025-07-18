@@ -24,16 +24,15 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background: hsla(var(--preto-hsl), 1);
+    background: hsla(var(--branco-hsl), 1);
     border-radius: 50%;
-    transition: transform 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transform: translateX(0px);
     /*Posição inicial SOL*/
-    transition: transform 0.5s ease-out, background 1s ease;
+    transition: transform 0.5s ease-out, background 0.5s ease;
 }
 
 .toggle.dark {
@@ -42,7 +41,7 @@
 }
 
 .toggle.dark .slider {
-    background: hsla(var(--branco-hsl), 1);
+    background: hsla(var(--preto-hsl), 1);
     transform: translateX(15px);
     /*Posição final LUA*/
 }
@@ -56,7 +55,7 @@
     /* Standard syntax */
 
     position: absolute;
-    transition: transform 0.5s ease-in-out, opacity 0.3s ease;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease;
     width: 15px;
     height: 15px;
     font-size: 12px;
@@ -65,28 +64,29 @@
 .icon-moon {
     top: 3.5px;
     color: hsla(var(--branco-hsl), 1);
-    opacity: 1;
+    opacity: 0;
+    transform: rotate(-75deg);
 }
 
 .icon-sun {
     top: 4px;
     color: hsla(var(--preto-hsl), 1);
-    opacity: 0;
+    opacity: 1;
     position: absolute;
-    transform: rotate(-45deg);
-    /*Angulo inicial da lua*/
+    transform: rotate(0deg);
+    /*Angulo inicial do sol*/
 }
 
 .toggle.dark .icon-moon {
-    transform: rotate(45deg);
-    /*Angulo final do sol (esse estado final tem opacidade 0)*/
-    opacity: 0;
-}
-
-.toggle.dark .icon-sun {
     transform: rotate(0deg);
     /*Angulo final da lua*/
     opacity: 1;
+}
+
+.toggle.dark .icon-sun {
+    transform: rotate(75deg);
+    /*Angulo final do sol*/
+    opacity: 0;
 }
 
 @media (max-width: 1024px) {

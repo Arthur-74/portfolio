@@ -4,12 +4,12 @@ function toggleMode() {
     const toggle2 = document.getElementById('toggle2');
 
     // Alterna classes
-    app.classList.toggle('dark-theme');
+    app.classList.toggle('light-theme');
     toggle.classList.toggle('dark');
     toggle2.classList.toggle('dark');
 
     // Salva no localStorage
-    const isDark = app.classList.contains('dark-theme');
+    const isDark = app.classList.contains('light-theme');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('toggle');
 
     if (theme === 'dark') {
-        app.classList.add('dark-theme');
+        app.classList.add('light-theme');
         toggle.classList.add('dark');
         toggle2.classList.toggle('dark');
     }

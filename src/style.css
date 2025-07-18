@@ -2,44 +2,6 @@
     --preto-hsl: 0, 0%, 0%;
     --branco-hsl: 0, 0%, 100%;
     --texto-hsl: 211.2, 12.56%, 100%;
-    --cinza-100-hsl: 0, 0%, 95%;
-    --cinza-200-hsl: 0, 0%, 85%;
-    --cinza-300-hsl: 0, 0%, 70%;
-    --cinza-400-hsl: 0, 0%, 50%;
-    --cinza-500-hsl: 0, 0%, 30%;
-
-    --bg-color-hsl: var(--branco-hsl);
-    --text-color-hsl: var(--preto-hsl);
-    --filter: none;
-
-    --filter-thumb: saturate(0) invert(0) opacity(1);
-    --filter-thumb-hover: saturate(1) invert(0) opacity(1);
-
-    --icon-color-black: 0, 0%, 100%;
-
-    /* --fill-color: transparent; */
-
-    /* --about-color: var(--cinza-400-hsl);*/
-    --about-color: #5f75f2;
-    --about-bg-color: none;
-
-    --skills-color: #00e388;
-    --skills-bg-color: none;
-
-    --projects-color: #ff0099;
-    --projects-bg-color: none;
-
-    --contato-color: #00ebdf;
-    --contato-bg-color: none;
-
-    --extras-color: #f68eff;
-    --extras-bg-color: none;
-}
-
-.dark-theme {
-    --preto-hsl: 0, 0%, 0%;
-    --branco-hsl: 0, 0%, 100%;
-    --texto-hsl: 211.2, 12.56%, 100%;
     --cinza-100-hsl: 0, 0%, 10%;
     --cinza-200-hsl: 0, 0%, 20%;
     --cinza-300-hsl: 0, 0%, 35%;
@@ -71,6 +33,41 @@
 
     --extras-color: -webkit-linear-gradient(37deg, #9800ff 0%, #feff00 100%);
     --extras-bg-color: linear-gradient(90deg, #9800ff 0%, #feff00 100%);
+}
+
+.light-theme {
+    --preto-hsl: 0, 0%, 0%;
+    --branco-hsl: 0, 0%, 100%;
+    --texto-hsl: 211.2, 12.56%, 100%;
+    --cinza-100-hsl: 0, 0%, 95%;
+    --cinza-200-hsl: 0, 0%, 85%;
+    --cinza-300-hsl: 0, 0%, 70%;
+    --cinza-400-hsl: 0, 0%, 50%;
+    --cinza-500-hsl: 0, 0%, 30%;
+
+    --bg-color-hsl: var(--branco-hsl);
+    --text-color-hsl: var(--preto-hsl);
+    --filter: none;
+
+    --filter-thumb: saturate(0) invert(0) opacity(1);
+    --filter-thumb-hover: saturate(1) invert(0) opacity(1);
+
+    --icon-color-black: 0, 0%, 100%;
+
+    --about-color: #5f75f2;
+    --about-bg-color: none;
+
+    --skills-color: #00e388;
+    --skills-bg-color: none;
+
+    --projects-color: #ff0099;
+    --projects-bg-color: none;
+
+    --contato-color: #00ebdf;
+    --contato-bg-color: none;
+
+    --extras-color: #f68eff;
+    --extras-bg-color: none;
 }
 
 html {
