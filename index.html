@@ -38,9 +38,7 @@
 
 <body id="app">
     <div class="cursor-neon"></div>
-    <button id="scrollButton">
-        <i class="fa-regular fa-angles-down"></i>
-    </button>
+
     <section id="topbar">
 
         <img src="assets/images/AB-black.svg" class="logotipotopbar" alt="">
@@ -81,6 +79,7 @@
             </div>
         </div>
     </section>
+
     <div class="menu_expand_area">
         <nav class="menu">
             <ul>
@@ -676,18 +675,6 @@
         </div>
     </section>
 
-    <!-- <section id="extra" class="extras">
-        <div class="extras_section">
-            <div id="title">
-                <span>Curiosidades</span>
-                <p>Extras</p>
-            </div>
-            <div class="extras_grid">
-
-            </div>
-        </div>
-    </section> -->
-
     <footer>
         <div class="footer_section">
             <div class="footer_grid">
@@ -768,59 +755,16 @@
         </div>
     </footer>
 
+    <button id="scrollButton">
+        <span class="iconNext">
+            <i class="fa-regular fa-angles-down"></i>
+        </span>
+    </button>
+
     <script src="src/toggle.js"></script>
+    <script src="src/BottomNextSectionButton.js"></script>
+
     <script>
-
-        const button = document.getElementById('scrollButton');
-
-        button.addEventListener('mouseenter', () => {
-            const computedStyle = window.getComputedStyle(button);
-            const matrix = new DOMMatrixReadOnly(computedStyle.transform);
-            const currentY = matrix.m42;
-
-            // Para animação e fixa Y atual
-            button.style.animation = 'none';
-            button.style.transform = `translate(-50%, ${currentY}px)`;
-
-            // Espera um frame para aplicar transição suave
-            requestAnimationFrame(() => {
-                button.style.transition = 'transform 0.3s ease, background 0.5s ease, color 0.5s ease, box-shadow 0.5s';
-                button.style.transform = 'translate(-50%, 0)';
-            });
-        });
-
-        button.addEventListener('mouseleave', () => {
-            // Restaura animação
-            button.style.transition = '';
-            button.style.animation = 'bounce2 2s ease infinite';
-        });
-
-        button.addEventListener('mouseleave', () => {
-            // Remove o transition e restaura a animação
-            icon.style.transition = '';
-            icon.style.animation = 'bounce2 2s ease infinite';
-        });
-
-        const sections = Array.from(document.querySelectorAll("section"));
-        const next = document.getElementById("scrollButton");
-
-        next.addEventListener("click", () => {
-            const scrollY = window.scrollY;
-            const viewportHeight = window.innerHeight;
-
-            // Encontramos a próxima seção com base na posição atual
-            const nextSection = sections.find(section => {
-                const rect = section.getBoundingClientRect();
-                return rect.top > 10; // Seção abaixo da posição atual
-            });
-
-            if (nextSection) {
-                nextSection.scrollIntoView({ behavior: "smooth" });
-            } else {
-                // Se não há mais seções abaixo, volta para o topo (primeira)
-                sections[0].scrollIntoView({ behavior: "smooth" });
-            }
-        });
 
         const cursor = document.querySelector(".cursor-neon");
 

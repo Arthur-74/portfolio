@@ -1344,26 +1344,26 @@ footer {
     }
 }
 
+/* =============================================================================== */
+
 #scrollButton {
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
-    padding: 10px;
+    z-index: 10;
     border: 2px solid hsl(var(--text-color-hsl), 0.1);
     border-radius: 25px;
     background-color: hsl(var(--bg-color-hsl));
     color: hsl(var(--cinza-300-hsl));
     cursor: pointer;
     box-shadow: none;
-    font-size: 1rem;
     animation: bounce2 2s ease infinite;
-    transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+    /* transition: background 0.5s, color 0.5s, box-shadow 0.5s; */
+    transition: top 0.2s ease, background 0.5s, color 0.5s, box-shadow 0.5s;
 }
 
 #scrollButton:hover {
-    /* background-color: hsl(var(--cinza-100-hsl), 0.5); */
     color: hsl(var(--text-color-hsl), 0.6);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -1372,6 +1372,26 @@ footer {
     0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
     40% { transform: translate(-50%, -10px); }
     60% { transform: translate(-50%, -5px); }
+}
+
+/* Ícone com rotação suave */
+.iconNext {
+    font-size: 1rem;
+    display: inline-block;
+    transition: transform 0.3s linear;
+    padding: 10px 4px;
+}
+
+/* Quando deve girar */
+.iconNext.rotate {
+    transform: rotate(180deg);
+}
+
+/* Estilo aplicado quando botão deixa de ser fixo */
+#scrollButton.stopped {
+    position: absolute;
+    bottom: 300px; /* altura que define onde ele “para” */
+    animation: bounce2 2s ease infinite;
 }
 
 /*=================================================================================*/
