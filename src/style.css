@@ -1,6 +1,7 @@
 :root {
     --slides-visible: 3;
-    
+
+
     --preto-hsl: 0, 0%, 0%;
     --branco-hsl: 0, 0%, 100%;
     --texto-hsl: 211.2, 12.56%, 100%;
@@ -56,6 +57,9 @@
 
     --icon-color-black: 0, 0%, 100%;
 
+    /* --fill-color: transparent; */
+
+    /* --about-color: var(--cinza-400-hsl);*/
     --about-color: #5f75f2;
     --about-bg-color: none;
 
@@ -136,7 +140,7 @@ body {
 .menu {
     display: block;
     font-family: 'Poppins';
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.05rem;
     padding: 0 10px;
     margin: 0 0 0 10px;
@@ -156,8 +160,8 @@ body {
 }
 
 .menu ul li a {
-    color: hsla(var(--text-color-hsl), 1);
-    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.2);
+    color: hsla(var(--text-color-hsl), 0.4);
+    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0);
     transition: ease 0.5s;
     white-space: nowrap;
     padding: 10px 20px;
@@ -166,22 +170,21 @@ body {
 
 .menu ul li a:hover {
     color: hsla(var(--text-color-hsl), 1);
-    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.6);
+    text-shadow: 0.5px 0.5px hsla(var(--bg-color-hsl));
+    background-color: hsla(var(--text-color-hsl), 0.1);
     transition: ease 0.5s;
+}
+
+.light-theme .menu ul li a {
+    color: hsla(var(--text-color-hsl), 0.5);
+    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.2);
+}
+
+.light-theme .menu ul li a:hover {
+    color: hsla(var(--text-color-hsl), 1);
+    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0.6);
     background-color: hsla(var(--cinza-100-hsl), 0.2);
-    box-shadow: 0.5px 0.5px 5px hsla(var(--preto-hsl), 0.1);
-}
-
-.dark-theme .menu ul li a {
-    color: hsla(var(--texto-hsl), 0.5);
-    text-shadow: 0.5px 0.5px hsla(var(--text-color-hsl), 0);
-}
-
-.dark-theme .menu ul li a:hover {
-    color: hsla(var(--branco-hsl), 1);
-    text-shadow: 0.5px 0.5px var(--preto-hsl);
-    background-color: hsla(var(--branco-hsl), 0.1);
-    /* 50% opacidade */
+    box-shadow: 0.5px 0.5px 5px hsla(var(--text-color-hsl), 0.1);
 }
 
 .menu_expand_area {
@@ -385,7 +388,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     justify-content: start;
-    max-width: 100vw;
 }
 
 .skills_section #title {
@@ -488,6 +490,7 @@ body {
     color: hsl(var(--text-color-hsl));
     padding: 0 0 15px 0;
     text-align: center;
+    text-wrap: nowrap;
 }
 
 .skills_section #skills_list {
@@ -497,7 +500,6 @@ body {
 }
 
 .skills_section #skills_list .name {
-    height: 30px;
     margin-right: 10px;
     transition: ease 0.5s;
     position: relative;
@@ -558,9 +560,8 @@ body {
     font-size: 0.8rem;
     text-align: center;
     font-weight: 400;
-    height: 20px;
     align-content: center;
-    padding: 5px 10px;
+    padding: 8px 10px;
     text-wrap: nowrap;
 }
 
@@ -1238,7 +1239,6 @@ body {
     user-select: none;
     background: 
     linear-gradient(0deg, hsl(var(--bg-color-hsl), 0) 0%, hsl(var(--bg-color-hsl), 0.3) 20%, hsl(var(--bg-color-hsl), 0.3) 80%, hsl(var(--bg-color-hsl), 0) 100%);
-
 }
 
 .extras_section {
@@ -1318,8 +1318,7 @@ footer {
     padding: 20px 40px 20px 80px;
 }
 
-
-
+/* =============================================================================== */
 
 .footer_specs {
     width: auto;
@@ -1344,6 +1343,7 @@ footer {
     max-width: 400px;
 }
 
+/* =============================================================================== */
 
 .footer_menu {
     padding: 30px;
@@ -1386,8 +1386,7 @@ footer {
     text-shadow: none;
 }
 
-
-
+/* =============================================================================== */
 
 .footer_socialmedias {
     padding: 30px;
@@ -1484,7 +1483,6 @@ footer {
     cursor: pointer;
     box-shadow: none;
     animation: bounce2 2s ease infinite;
-    /* transition: background 0.5s, color 0.5s, box-shadow 0.5s; */
     transition: top 0.2s ease, background 0.5s, color 0.5s, box-shadow 0.5s;
 }
 
@@ -1573,24 +1571,7 @@ footer {
 
     /*=====================================================*/
 
-    .skills_section {
-        width: 100%;
-        position: relative;
-        padding: 15px 0 20px 0;
-    }
-
-    /*=====================================================*/
-
-    .projects_section {
-        width: 100%;
-        position: relative;
-        padding: 15px 0 20px 0;
-    }
-
-    /*=====================================================*/
-
     .contact_section {
-        width: 100%;
         width: 100%;
         position: relative;
         padding: 15px 30px 20px 30px;
@@ -1639,6 +1620,23 @@ footer {
 
     /*=====================================================*/
 
+    .skills_section {
+        width: 100dvw;        
+    }
+
+    .skills_grid {
+        max-width: 100dvw;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        overflow: hidden;
+    }
+
+    .skills_section #skills_list .name #name {
+        font-size: 0.6rem;
+    }
+
+
+    /*=====================================================*/
+
     .icons_contact {
         display: inline;
     }
@@ -1646,6 +1644,7 @@ footer {
     .contact_email {
         min-width: auto;
     }
+
     .email_contact {
         display: inline;
     }
