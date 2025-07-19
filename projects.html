@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Arthur</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="src/ResetCSS.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/toggle.css">
+    <link rel="stylesheet" href="src/menuExpand.css">
+    <link rel="stylesheet" href="src/bg-pattern-footer.css">
+
+    <!--- DevIcons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css">
+
+</head>
+
+<body id="app">
+    <div class="cursor-neon"></div>
+
+    <section id="topbar">
+
+        <img src="assets/images/AB-black.svg" class="logotipotopbar" alt="">
+
+        <div id="titulonav">
+            <p id="nome">Arthur Brito</p>
+            <p id="info">Web Developer</p>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html#">Home</a></li>
+                <li><a href="index.html#aboutid">Sobre mim</a></li>
+                <li><a href="index.html#skills">Habilidades</a></li>
+                <li><a href="index.html#projects">Projetos</a></li>
+                <!-- <li><a href="index.html#experience">Experiência</a></li> -->
+                <li><a href="index.html#contact">Contato</a></li>
+                <!-- <li><a href="index.html#extra">Extras</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="togglefather">
+            <div class="toggle" id="toggle" onclick="toggleMode()">
+                <div class="slider">
+                    <i class="fa-light fa-moon-stars icon icon-moon"></i>
+                    <i class="fa-light fa-sun-bright icon icon-sun"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="burgerMenuFather">
+            <div class="burgerMenuExpand burgerMenu" id="burgerMenu">
+                <div class="span">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu_expand_area">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html#">Home</a></li>
+                <li><a href="index.html#aboutid">Sobre mim</a></li>
+                <li><a href="index.html#skills">Habilidades</a></li>
+                <li><a href="index.html#projects">Projetos</a></li>
+                <!-- <li><a href="index.html#experience">Experiência</a></li> -->
+                <li><a href="index.html#contact">Contato</a></li>
+                <!-- <li><a href="index.html#extra">Extras</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="togglefather">
+            <div class="toggle" id="toggle2" onclick="toggleMode()">
+                <div class="slider">
+                    <i class="fa-light fa-sun-bright icon icon-sun"></i>
+                    <i class="fa-light fa-moon-stars icon icon-moon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="projects" class="projects">
+        <div class="projects_section">
+            <span class="linha-vertical-projects-section esquerda"></span>
+            <span class="linha-vertical-projects-section direita"></span>
+            <div id="title">
+                <span>Meus</span>
+                <p>Projetos</p>
+            </div>
+            <div class="projects_grid">
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/LoopFreePrint1.png" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/menu-buttons0.gif" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/LoopFreePrint1.png" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/menu-buttons0.gif" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/LoopFreePrint1.png" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/LoopFreePrint1.png" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+                <a class="project_card_model project_card_display" href="X" draggable="false">
+                    <span class="linha-vertical esquerda"></span>
+                    <span class="linha-vertical direita"></span>
+
+                    <div class="project_thumb_model">
+                        <span class="linha-vertical0 esquerda"></span>
+                        <span class="linha-vertical0 direita"></span>
+                        <div class="thumb_limiter">
+                            <img class="thumb_model" alt="" src="assets/images/LoopFreePrint1.png" draggable="false" />
+                        </div>
+                    </div>
+
+                    <div class="titles_model">
+                        <p id="project_title_model">Exemplo</p>
+                        <p id="subtitle_model">Exemplo de subtítulo</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="seeAll_projects">
+                <div class="seeAll_button" id="seeAllDisplay" onclick="mostrarMaisCards()">
+                    <span class="linha-vertical-seeall esquerda"></span>
+                    <span class="linha-vertical-seeall direita"></span>
+                    <i class="icon-all-projects fa-regular fa-circle-plus"></i>
+                    <p>Ver mais</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer_section">
+            <div class="footer_grid">
+
+                <div class="footer_specs">
+                    <div class="footer_title">
+                        <img src="assets/images/AB-black.svg" class="logotipotopbar" alt="">
+                        <div id="titulonav">
+                            <p id="nome">Arthur Brito</p>
+                            <p id="info">Web Developer</p>
+                        </div>
+                    </div>
+                    <p class="footer_text">Desenvolvedor front-end focado em interfaces
+                        modernas,
+                        acessíveis e
+                        responsivas, com ênfase em performance, usabilidade e design centrado no usuário.
+                    </p>
+                </div>
+
+                <div class="footer_menu">
+                    <nav class="menuFooter">
+                        <p>Navegação</p>
+                        <ul>
+                            <li><a href="index.html#">Home</a></li>
+                            <li><a href="index.html#aboutid">Sobre mim</a></li>
+                            <li><a href="index.html#skills">Habilidades</a></li>
+                            <li><a href="index.html#projects">Projetos</a></li>
+                            <!-- <li><a href="index.html#experience">Experiência</a></li> -->
+                            <li><a href="index.html#contact">Contato</a></li>
+                            <!-- <li><a href="index.html#extra">Extras</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer_socialmedias">
+                    <p>Redes sociais</p>
+                    <div class="icons_contact">
+                        <a href="https://www.linkedin.com/in/arthur74/" class="contact_icon">
+                            <svg viewBox="0 0 128 128" width="20px" style="padding: 2px 2px;">
+                                <path
+                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z">
+                                </path>
+                            </svg>
+                            <p>LinkedIn</p>
+                        </a>
+
+                        <a href="https://github.com/Arthur-74" class="contact_icon">
+                            <svg role="img" viewBox="0 0 24 24" width="20px" style="padding: 2px 2px;">
+                                <path
+                                    d="M18.906.614a3.4 3.4 0 0 0-.896.127c-.955.262-1.824.76-2.646 1.302a13.7 13.7 0 0 0-6.807-.002A11 11 0 0 0 6.71 1.016C6.136.78 5.526.585 4.899.622c-.113.01-.263.013-.315.135a5.8 5.8 0 0 0-.422 1.737 4.8 4.8 0 0 0 .223 1.923 5.4 5.4 0 0 0-1.36 3.053c-.05.453-.036.91-.015 1.365-.934-.237-1.93-.278-2.867-.035-.11.025-.174.16-.128.261.036.092.146.14.238.111.912-.232 1.881-.177 2.783.074q.045.412.107.821c-.798-.196-1.635-.093-2.42.11-.14.033-.18.238-.071.328.083.08.205.04.303.015.74-.18 1.536-.258 2.275-.027.072.248.13.5.226.741l.316.715c.321.63.806 1.167 1.365 1.596a6.8 6.8 0 0 0 1.73.942c.727.277 1.49.449 2.258.571a3.3 3.3 0 0 0-.376.498 3.2 3.2 0 0 0-.335.795c-.43.007-.865.05-1.288-.045a1.95 1.95 0 0 1-.864-.452 3.6 3.6 0 0 1-.62-.739 1 1 0 0 0-.618-.43.73.73 0 0 0-.57.11.67.67 0 0 0-.256.406c-.051.221-.011.452.059.665.122.365.351.687.626.954.485.467 1.089.799 1.726 1.006.535.17 1.112.257 1.667.143-.003.99.003 1.979-.003 2.968-.024.232-.134.45-.28.628-.1.128-.23.231-.377.301-.128.056-.268.102-.362.212a.43.43 0 0 0-.097.422.41.41 0 0 0 .265.25c.148.05.306.039.46.036.45-.013.907-.1 1.306-.318.55-.294.95-.897.925-1.532-.002-.679-.022-1.357-.032-2.036-.003-.385-.018-.771.016-1.155.028 1.009.034 2.019.054 3.028.002.324-.001.654-.09.97a1.8 1.8 0 0 1-.365.682c-.098.12-.226.22-.295.362-.06.114-.07.26.001.37.084.143.254.197.409.22.33.041.657-.073.95-.218a2.16 2.16 0 0 0 .86-.783c.209-.338.308-.736.316-1.13.01-.584.008-1.167.017-1.75.035-.297.021-.596.028-.894.005.175.003.35.004.525-.027.534-.003 1.07-.004 1.604.01.31-.013.624.049.93.062.324.195.636.398.897.234.3.551.53.902.678.294.123.63.204.943.105.156-.044.296-.18.3-.35.003-.169-.105-.312-.22-.427a1.87 1.87 0 0 1-.524-1.36V18.47c.004-.27-.012-.54.014-.809.049.405.034.814.033 1.22.004.733-.003 1.466.004 2.2.015.41.18.822.48 1.108.346.337.824.5 1.295.565q.36.05.719.026c.182-.016.37-.137.408-.324.039-.176-.059-.355-.2-.457-.093-.075-.215-.095-.318-.153-.292-.16-.5-.451-.588-.77-.045-.138-.022-.284-.028-.426.001-.89-.007-1.782.008-2.672.483.097.983.043 1.455-.084a4.6 4.6 0 0 0 1.794-.94c.334-.29.618-.651.761-1.073.068-.205.11-.426.068-.641a.7.7 0 0 0-.233-.414.72.72 0 0 0-.583-.137 1 1 0 0 0-.632.431c-.206.314-.445.612-.744.841a1.9 1.9 0 0 1-.718.346c-.43.103-.876.059-1.314.051a3.9 3.9 0 0 0-.72-1.269c-.032-.022.018-.042.036-.041 1.228-.18 2.453-.528 3.514-1.188a5.15 5.15 0 0 0 1.638-1.593 3 3 0 0 0 .21-.383c.096-.214.203-.423.285-.644a8 8 0 0 0 .218-.725c.661-.228 1.38-.193 2.057-.057q.187.037.375.084c.07.017.154.017.21-.036.104-.084.073-.278-.054-.323-.81-.218-1.677-.314-2.5-.104a9 9 0 0 0 .109-.792c0-.031.038-.032.06-.041.903-.252 1.874-.306 2.788-.073.12.038.227-.057.263-.165v-.037c-.031-.073-.074-.156-.16-.173-.956-.246-1.971-.197-2.92.052.038-.68.033-1.37-.125-2.037a5.5 5.5 0 0 0-1.251-2.399c.386-1.133.283-2.39-.134-3.499-.04-.105-.07-.249-.204-.27q-.15-.03-.3-.032" />
+                            </svg>
+                            <p>GitHub</p>
+                        </a>
+
+                        <a href="https://www.instagram.com/arthurwilliamfb/" class="contact_icon">
+                            <svg role="img" viewBox="0 0 24 24" width="20px" style="padding: 2px 2px;">
+                                <path
+                                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                            </svg>
+                            <p>Instagram</p>
+                        </a>
+
+                        <a href="https://x.com/ArthurW74" class="contact_icon">
+                            <svg role="img" viewBox="0 0 24 24" width="20px" style="padding: 2px 2px;">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                            <p>Twitter</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer_copyright">
+                <i class="fa-regular fa-copyright"></i>
+                <p>Arthur William - 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <button id="scrollButton">
+        <span class="iconNext">
+            <i class="fa-regular fa-angles-down"></i>
+        </span>
+    </button> -->
+
+    <script src="src/toggle.js"></script>
+    <script src="src/carrossel.js"></script>
+    <script src="src/BottomNextSectionButton.js"></script>
+    <script src="src/neonCursorBackground.js"></script>
+    <script src="src/burgerMenu.js"></script>
+    <script src="src/animationIconSkillsHover.js"></script>
+    <script src="src/seeMoreButton.js"></script>
+
+</body>
+
+</html>
